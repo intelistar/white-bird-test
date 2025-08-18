@@ -1,0 +1,9 @@
+@import "@/styles/main";
+
+.container {
+    padding: $gap-s 0;
+    .title {
+        font-size: $font-size-l;
+        margin-bottom: $gap-s;
+    }
+}

@@ -1,0 +1,7 @@
+@import "@/styles/main";
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xxxs;
+}

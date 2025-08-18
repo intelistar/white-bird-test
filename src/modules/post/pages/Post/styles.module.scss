@@ -1,0 +1,13 @@
+@import "@/styles/main";
+
+.container {
+    padding: $gap-xxs 0;
+
+    .title {
+        font-size: $font-size-l;
+    }
+    .body {
+        margin: $gap-xxs 0;
+        font-size: $font-size-s;
+    }
+}

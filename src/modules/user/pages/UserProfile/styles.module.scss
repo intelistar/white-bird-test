@@ -1,0 +1,102 @@
+@import "@/styles/main";
+
+.container {
+    padding: $gap-xxs $gap-xs;
+    color: $secondary-color;
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: $gap-xs;
+        margin-bottom: $gap-xs;
+
+        .avatar {
+            width: $size-l;
+            height: $size-l;
+            border-radius: 50%;
+            background: linear-gradient(135deg, $accent-color, $accent-color-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: $white;
+            font-weight: $font-weight-extrabold;
+        }
+
+        .name {
+            font-size: $font-size-m;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .username {
+            color: $secondary-color;
+            font-size: $font-size-xs;
+            margin-top: $gap-xxxs;
+        }
+    }
+    .details {
+        margin-bottom: $gap-xs;
+
+        .sectionTitle {
+            font-size: $font-size-s;
+            font-weight: $font-weight-extrabold;
+            margin-bottom: $gap-xxxs;
+            color: $secondary-color;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: $gap-xxs;
+
+            li {
+                font-size: $font-size-xs;
+                color: $secondary-color;
+
+                strong {
+                    font-weight: 600;
+                    color: $secondary-color;
+                    margin-right: $gap-xxxs;
+                }
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        gap: $gap-xs;
+        margin-top: $gap-s;
+
+        .editBtn,
+        .adminBtn {
+            padding: $gap-xxxs $gap-xxs;
+            border-radius: $border-radius-xs;
+            font-size: $font-size-xs;
+            font-weight: $font-weight-extrabold;
+            cursor: pointer;
+            border: none;
+            @include transition();
+        }
+
+        .editBtn {
+            background: $border-color;
+            color: $secondary-color;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .adminBtn {
+            background: $accent-color;
+            color: $white;
+
+            &:hover {
+                background: $accent-color-2;
+            }
+        }
+    }
+}

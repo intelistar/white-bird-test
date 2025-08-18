@@ -1,0 +1,63 @@
+@import "@/styles/main";
+
+.container {
+    position: relative;
+
+    padding: $gap-xxs;
+    padding-right: $gap-s;
+    padding-bottom: $gap-m;
+    border-radius: $border-radius-xs;
+
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xxxs;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    @include transition($duration-300);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .delete {
+        position: absolute;
+        bottom: $gap-xxxs;
+        right: $gap-xxxs;
+        cursor: pointer;
+        @include transition();
+
+        &:hover {
+            transform: scale($scale-s);
+        }
+
+        .deleteIcon {
+            width: $size-xs;
+        }
+    }
+
+    .favourite {
+        position: absolute;
+        top: $gap-xxxs;
+        right: $gap-xxxs;
+    }
+
+    .reaction {
+        position: absolute;
+        bottom: $gap-xxxs;
+        left: $gap-xxxs;
+    }
+
+    .title {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+        margin-bottom: $gap-xxs;
+        color: $secondary-color;
+    }
+
+    .body {
+        font-size: $font-size-xxs;
+        color: $secondary-color;
+        line-height: 1.4;
+    }
+}

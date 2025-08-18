@@ -1,0 +1,9 @@
+@import "@/styles/main";
+
+.wrapper {
+    margin: 0 auto;
+    max-width: $size-laptop;
+    height: 100%;
+
+    padding: $gap-xxxs;
+}

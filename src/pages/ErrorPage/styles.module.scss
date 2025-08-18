@@ -1,0 +1,23 @@
+@import "@/styles/main";
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-s;
+
+    .title {
+        font-size: $font-size-l;
+    }
+    .link {
+        font-size: $font-size-m;
+        color: $secondary-color;
+        @include transition($duration-400);
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}

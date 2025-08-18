@@ -1,0 +1,56 @@
+@import "@/styles/main";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xxs;
+    padding: $gap-xxs;
+    border-radius: $border-radius-xs;
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+
+        .error {
+            color: $error-color;
+            font-size: $font-size-xxs;
+        }
+    }
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: $gap-xxs;
+    font-size: $font-size-xs;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-xs;
+    outline: none;
+    @include transition($duration-200);
+
+    &:focus {
+        border-color: $accent-color;
+    }
+}
+
+.textarea {
+    resize: vertical;
+    min-height: $size-l;
+}
+
+.button {
+    align-self: flex-end;
+    padding: $gap-4xs $gap-xxxs;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    background-color: $accent-color;
+    color: $primary-color;
+    border: none;
+    border-radius: $border-radius-xs;
+    cursor: pointer;
+    @include transition($duration-200);
+
+    &:hover {
+        background-color: $accent-color-2;
+    }
+}

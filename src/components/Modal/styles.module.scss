@@ -1,0 +1,40 @@
+@import "@/styles/main";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: $bg-opacity;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+
+  .content {
+    margin: $gap-xxs;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: $size-xxs;
+      right: $size-xxs;
+      color: $error-color;
+
+      line-height: 70%;
+
+      font-size: $font-size-l;
+      font-weight: $font-weight-extrabold;
+
+      cursor: pointer;
+    }
+
+    @media (max-width: $size-tablet) {
+      width: 100%;
+    }
+  }
+}

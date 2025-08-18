@@ -1,0 +1,31 @@
+@import "@/styles/main";
+
+.card {
+    width: 100%;
+    padding: $gap-xxs;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: $border-radius-xs;
+    @include transition($duration-400);
+
+    &:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .email {
+        font-size: $font-size-xxs;
+        font-weight: 600;
+        color: $accent-color;
+        margin-bottom: $gap-xs;
+        display: inline-block;
+        background-color: rgba(74, 111, 161, 0.08);
+        padding: $gap-xxxs $gap-xxs;
+        border-radius: $border-radius-xs;
+    }
+
+    .body {
+        font-size: $font-size-xs;
+        color: $secondary-color;
+        line-height: 1.6;
+    }
+}

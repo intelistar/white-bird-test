@@ -1,0 +1,47 @@
+@import "@/styles/main";
+
+.container {
+    width: "100%";
+    height: $size-m;
+
+    background-color: $accent-color;
+    .wrapper {
+        margin: 0 auto;
+        max-width: $size-laptop;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: $gap-xxxs;
+
+        .list {
+            display: flex;
+            align-items: center;
+            gap: $gap-xl;
+            .link {
+                font-size: $font-size-m;
+                color: $primary-color;
+
+                @include transition();
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .icon {
+            width: $size-s;
+            @include transition();
+
+            &:hover {
+                transform: scale($scale-s);
+            }
+        }
+    }
+}

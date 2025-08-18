@@ -1,0 +1,10 @@
+@import "@/styles/main";
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap-xxs;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

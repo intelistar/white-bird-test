@@ -1,0 +1,53 @@
+@import "@/styles/main";
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: $gap-xxs $gap-xs;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-xs;
+    background-color: $white;
+
+    @include transition($duration-200);
+
+    &:hover {
+        background-color: lighten($border-color, 35%);
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-4xs;
+        .name {
+            font-size: $font-size-s;
+            font-weight: $font-weight-extrabold;
+        }
+        .username {
+            font-size: $font-size-xs;
+            color: $secondary-color;
+        }
+    }
+    .editButton {
+        background: transparent;
+        border: none;
+        padding: 0.4rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include transition($duration-200);
+
+        &:hover {
+            background-color: lighten($accent-color, 40%);
+        }
+        .icon {
+            width: $size-xs;
+            object-fit: contain;
+        }
+    }
+}

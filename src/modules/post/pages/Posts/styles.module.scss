@@ -1,0 +1,13 @@
+@import "@/styles/main";
+
+.title {
+    font-size: $font-size-l;
+    margin: $gap-xs 0;
+}
+
+.tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $gap-xxs 0;
+}

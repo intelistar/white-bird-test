@@ -1,0 +1,17 @@
+@import "@/styles/main";
+
+.loader {
+  width: $size-m;
+  height: $size-m;
+  border: 5px solid $accent-color;
+  border-radius: 50%;
+  border-top-color: $primary-color;
+  animation: spin 1s ease-in-out infinite;
+  margin: $gap-s auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

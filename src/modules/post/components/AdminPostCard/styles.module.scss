@@ -1,0 +1,45 @@
+@import "@/styles/main";
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $gap-xxs;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-xs;
+
+    .info {
+        flex: 1;
+
+        .title {
+            font-size: $font-size-s;
+            font-weight: $font-weight-extrabold;
+            margin-bottom: $gap-xxxs;
+        }
+
+        .priority {
+            font-size: $font-size-xs;
+            color: $secondary-text-color;
+        }
+
+        .priorityValue {
+            font-weight: $font-weight-extrabold;
+            color: $secondary-color;
+        }
+    }
+    .actions {
+        display: flex;
+        gap: $gap-xs;
+
+        .increase,
+        .decrease {
+            font-size: $font-size-m;
+            cursor: pointer;
+            @include transition();
+
+            &:hover {
+                transform: scale($scale-s);
+            }
+        }
+    }
+}

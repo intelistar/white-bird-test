@@ -1,0 +1,16 @@
+@import "@/styles/main";
+
+.container {
+    display: flex;
+    gap: $gap-xxxs;
+
+    .icon {
+        width: $size-xs;
+
+        @include transition();
+
+        &:hover {
+            transform: scale($scale-s);
+        }
+    }
+}
