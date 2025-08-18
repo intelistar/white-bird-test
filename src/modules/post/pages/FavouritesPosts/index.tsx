@@ -22,6 +22,10 @@ export const FavouritesPostsPage = () => {
     onPostsChange(newPosts);
   };
 
+  const handleDelete = (postId: number) => {
+    onPostsChange((prev) => prev.filter(({ id }) => id !== postId));
+  };
+
   if (loading) return <Loader />;
 
   return (
@@ -31,6 +35,7 @@ export const FavouritesPostsPage = () => {
         posts={favourites}
         onReactionChange={handleReaction}
         noPostsText={NO_FAVOURITES_POSTS_TEXT}
+        onDelete={handleDelete}
       />
     </section>
   );
