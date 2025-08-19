@@ -24,8 +24,6 @@ export const PostsPage = () => {
 
   const [selectedUser, setSelectedUser] = useState<number | null>(null);
 
-  const filteredPosts = useFilteredPosts(posts, selectedUser);
-
   const handleReaction = (id: number) => (reaction: ReactionStatus) => {
     const newPosts = posts.map((post) => {
       if (id === post.id) {
@@ -53,6 +51,8 @@ export const PostsPage = () => {
     };
     onPostsChange((prev) => [newPost, ...prev]);
   };
+
+  const filteredPosts = useFilteredPosts(posts, selectedUser);
 
   if (postsLoading || usersLoading) return <Loader />;
   if (postsError || usersError)

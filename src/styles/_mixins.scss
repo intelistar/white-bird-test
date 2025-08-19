@@ -1,21 +1,6 @@
 @import "./base/colors";
 @import "./base/variables";
 
-@mixin text-gradient {
-  background: linear-gradient(45deg, $text-gradient-first, $text-gradient-second, $text-gradient-third);
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 @mixin transition($time: 300ms, $property: all) {
   transition: $property $time ease;
-}
-
-@mixin hover-button {
-  @include transition;
-  &:hover {
-    opacity: $opacity-hover;
-  }
 }

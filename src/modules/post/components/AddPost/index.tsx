@@ -2,12 +2,8 @@ import { type ChangeEvent, type FC, type FormEvent, useState } from 'react';
 
 import { ALL_FILEDS_REQUIRED } from '@/constants/errors';
 
+import { DEFAULT_POST } from '../../constants';
 import styles from './styles.module.scss';
-
-const DEFAULT_POST = {
-  title: '',
-  body: '',
-};
 
 interface AddPostProps {
   onAdd: (title: string, body: string) => void;

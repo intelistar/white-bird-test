@@ -2,10 +2,9 @@ import Loader from '@/components/Loader';
 import type { ReactionStatus } from '@/types/like';
 
 import PostList from '../../components/PostList';
+import { NO_FAVOURITES_POSTS_TEXT } from '../../constants';
 import { useFavouritesPosts } from '../../hooks/useFavouritesPosts';
 import styles from './styles.module.scss';
-
-const NO_FAVOURITES_POSTS_TEXT = 'No favourites posts';
 
 export const FavouritesPostsPage = () => {
   const { favourites, onPostsChange, loading } = useFavouritesPosts();

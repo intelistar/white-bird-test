@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import { storageKeys } from '@/constants/storageKeys';
 import { storage } from '@/utils/localeStorage';
 
 import { usePosts } from './usePosts';
@@ -9,7 +10,7 @@ export const useFavouritesPosts = () => {
   const { posts, onPostsChange, loading, error } = usePosts();
 
   useEffect(() => {
-    const stored = storage.get<number[]>('posts') || [];
+    const stored = storage.get<number[]>(storageKeys.POSTS) || [];
     setFavouritesIds(stored);
   }, []);
 

@@ -1,5 +1,6 @@
 import { type FC, type MouseEvent, useEffect, useState } from 'react';
 
+import type { storageKeys } from '@/constants/storageKeys';
 import { storage } from '@/utils/localeStorage';
 
 import bookMarkIcon from '../../../public/bookmark.png';
@@ -7,7 +8,7 @@ import bookMarkFilledIcon from '../../../public/bookmark-filled.png';
 import styles from './styles.module.scss';
 
 interface FavouriteProps {
-  storageKey: string;
+  storageKey: storageKeys;
   id: number;
 }
 

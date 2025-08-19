@@ -2,13 +2,9 @@ import { type ChangeEvent, type FC, useState } from 'react';
 
 import { BODY_REQUIRED } from '@/constants/errors';
 
+import { DEFAULT_COMMENT_FORM } from '../../constants';
 import type { CommentForm } from '../../types';
 import styles from './styles.module.scss';
-
-const DEFAULT_COMMENT_FORM = {
-  email: '',
-  body: '',
-};
 
 interface AddCommentFormProps {
   onSubmit: (comment: CommentForm) => void;

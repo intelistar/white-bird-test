@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 
 import Favourite from '@/components/Favourite';
 import Reaction from '@/components/Reaction';
+import { storageKeys } from '@/constants/storageKeys';
 import type { ReactionStatus } from '@/types/like';
 
 import deleteIcon from '../../../../../public/delete.png';
@@ -42,7 +43,7 @@ const PostComponent: FC<PostComponentProps> = ({
         <Reaction reaction={reaction} onChange={onReactionChange} />
       </div>
       <div className={styles.favourite}>
-        <Favourite storageKey="posts" id={id} />
+        <Favourite storageKey={storageKeys.POSTS} id={id} />
       </div>
     </div>
   );
